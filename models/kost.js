@@ -30,11 +30,11 @@ const Kost = db.define('m_kost', {
     //allowNull: false
   },
   price: {
-    type: Sequelize.STRING,
+    type: Sequelize.INTEGER,
     //allowNull: false
   },
-  disaster_prone:{
-    type: Sequelize.BOOLEAN,
+  distance:{
+    type: Sequelize.INTEGER,
     //allowNull: false
   },
   facilities:{

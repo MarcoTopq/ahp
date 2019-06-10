@@ -1,0 +1,79 @@
+doctype html
+head
+  title Login Api Documentations
+  // Meta tag Keywords
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(charset='UTF-8')
+  meta(name='keywords', content='Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements')
+  script.
+    addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+    window.scrollTo(0, 1);
+    }
+  // Meta tag Keywords
+  // css files
+  link(rel='stylesheet', href='/apidocs/css/style.css', type='text/css', media='all')
+  // Style-CSS
+  link(rel='stylesheet', href='/apidocs/css/fontawesome-all.css')
+  // Font-Awesome-Icons-CSS
+  // //css files
+  // web-fonts
+  link(href='//fonts.googleapis.com/css?family=Nova+Round', rel='stylesheet')
+  link(href='//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', rel='stylesheet')
+  // //web-fonts
+// title
+h1
+  span V
+  | alidify
+  span L
+  | ogin
+  span F
+  | orm
+// //title
+// content
+.sub-main-w3
+  form#demo(method='POST' action='/login')
+    h2 Login Your Account
+    .form-group
+      input.form-control.textbox(type='text' name='username' placeholder='username' required='')
+    .form-group
+      input.form-control.textbox(type='password' name='password' placeholder='Password' required='')
+    .form-group-2
+      button.btn.btn-default.btn-osx.btn-lg(type='submit') Login
+        i.fas.fa-long-arrow-alt-right
+    .alert.alert-success.hidden(role='alert') You Have Successfully Logged In
+  // //switch
+// //content
+// copyright
+.footer
+  p
+    | &copy; 2018 Validify Login Form. All rights reserved | Design by
+    a(href='http://2-auto.id') 2-auto
+// //copyright
+// Jquery
+script(src='/apidocs/js/jquery-2.2.3.min.js')
+// //Jquery
+// validify plugin
+script(src='/apidocs/js/validify.js')
+script.
+  $("#demo").validify({
+//-   onSubmit: function (e, $this) {
+//-   $this.find('.alert').removeClass('hidden')
+//-   },
+  onFormSuccess: function (form) {
+  console.log("Form is valid now!")
+  },
+  onFormFail: function (form) {
+  console.log("Form is not valid :(")
+  }
+  });
+  $("#demo").validify({
+  errorStyle: "validifyError",
+  successStyle: "validifySuccess",
+  usernameFieldName: "username",
+  usernameCheck: true,
+  requiredAttr: "required",
+  });
+// //validify plugin
